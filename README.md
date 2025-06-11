@@ -15,4 +15,4 @@ A scalable cloud-based ETL pipeline that processes over 15GB of daily e-commerce
 - Optimized Spark transformations with partitioning and caching
 - Automated daily refresh for business reporting
 
-## Architecture
+
