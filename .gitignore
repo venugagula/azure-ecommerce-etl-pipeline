@@ -1,0 +1,32 @@
+# Byte-compiled / cache files
+__pycache__/
+*.py[cod]
+*.so
+*.pyd
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Environment files
+*.env
+.env.*
+
+# Logs and outputs
+*.log
+*.out
+
+# Data and secrets
+data/
+*.csv
+*.json
+*.xlsx
+
+# Power BI reports
+reports/*.pbix
+
+# System files
+.DS_Store
+
+# VS Code settings
+.vscode/
+
