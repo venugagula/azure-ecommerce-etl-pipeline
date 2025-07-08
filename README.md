@@ -1,20 +1,58 @@
-# Azure E-Commerce ETL Pipeline
+# 🛒 Azure E-Commerce ETL Pipeline
 
-## Overview
-A scalable cloud-based ETL pipeline that processes over 15GB of daily e-commerce data using Azure Data Factory and Databricks. Built with medallion architecture (Bronze → Silver → Gold) to streamline data quality, enrichment, and reporting.
+A scalable, production-grade ETL pipeline that processes over **15GB** of daily e-commerce data using Azure Data Factory, Databricks, and Delta Lake. Built with the **medallion architecture (Bronze → Silver → Gold)** to enable real-time insights, high data quality, and reliable reporting.
 
-## Tech Stack
-- Azure Data Factory
-- Azure Data Lake Storage Gen2
-- Azure Databricks (PySpark)
-- Delta Lake
-- Power BI
+---
 
-## Key Features
-- Ingests raw transactional data from external sources
-- Optimized Spark transformations with partitioning and caching
-- Automated daily refresh for business reporting
+## 🚀 Objective
 
-## Architecture
+Streamline raw transactional data into meaningful business insights using a cloud-native, cost-efficient architecture on Azure.
 
-![image](https://github.com/user-attachments/assets/f2f5eed4-2e6d-4c42-8c3d-54db4cc61297)
+---
+
+## 🧰 Tech Stack
+
+| Layer         | Tools/Tech                                                                 |
+|---------------|----------------------------------------------------------------------------|
+| Ingestion     | Azure Data Factory, Azure Storage Explorer                                 |
+| Processing    | Azure Databricks (PySpark), Delta Lake                                     |
+| Storage       | Azure Data Lake Storage Gen2 (Bronze → Silver → Gold)                     |
+| Orchestration | Azure Data Factory                                                         |
+| Reporting     | Power BI                                                                   |
+| File Format   | CSV, Delta                                                                 |
+
+---
+
+## 🔑 Key Features
+
+- ✅ Ingests raw transactional data from external vendors (CSV/JSON)
+- ⚡ Optimized Spark transformations with partitioning and caching
+- 🔁 Daily ETL automation using Azure Data Factory pipelines
+- 📊 Delta Lake used for upserts, schema enforcement, and ACID compliance
+- 📈 Near-real-time reporting via Power BI dashboards
+- 🔎 Built-in data validation module for quality checks
+
+---
+
+## 🧱 Architecture
+
+> 📌 Medallion Architecture (Bronze → Silver → Gold)
+
+![Architecture Diagram](https://github.com/venugagula/azure-ecommerce-etl-pipeline/assets/YOUR_ASSET_ID/diagram.png)
+
+---
+
+## 🗂️ Project Structure
+
+```bash
+azure-ecommerce-etl-pipeline/
+├── scripts/
+│   ├── ingestion.py            # Uploads files to ADLS (Bronze)
+│   ├── etl_pipeline.py         # Main PySpark transformation logic
+│   ├── delta_lake_utils.py     # Upsert helper functions using Delta
+│   └── validation.py           # Data quality checks
+├── reports/
+│   └── power_bi_dashboard.pbix
+├── requirements.txt
+├── .gitignore
+└── README.md
